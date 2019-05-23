@@ -1,0 +1,14 @@
+C:\Users\Asus\source\repos\BookCrc\BookCrc\bin\Debug\netcoreapp2.2\BookCrc.deps.json
+C:\Users\Asus\source\repos\BookCrc\BookCrc\bin\Debug\netcoreapp2.2\BookCrc.runtimeconfig.json
+C:\Users\Asus\source\repos\BookCrc\BookCrc\bin\Debug\netcoreapp2.2\BookCrc.runtimeconfig.dev.json
+C:\Users\Asus\source\repos\BookCrc\BookCrc\bin\Debug\netcoreapp2.2\BookCrc.dll
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.csproj.CoreCompileInputs.cache
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.RazorAssemblyInfo.cache
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.RazorAssemblyInfo.cs
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.AssemblyInfoInputs.cache
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.AssemblyInfo.cs
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.RazorTargetAssemblyInfo.cache
+C:\Users\Asus\source\repos\BookCrc\BookCrc\bin\Debug\netcoreapp2.2\BookCrc.pdb
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.dll
+C:\Users\Asus\source\repos\BookCrc\BookCrc\obj\Debug\netcoreapp2.2\BookCrc.pdb

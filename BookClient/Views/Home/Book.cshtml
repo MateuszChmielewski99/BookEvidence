@@ -1,0 +1,68 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+@{
+    ViewData["Title"] = "Book";
+}
+
+<h1>Your books</h1>
+
+
+<div class="form-group">
+    <div class="form-group">
+        <label for="valueInput"> Author's last name </label>
+        <input type="text" class="form-control" id="AuthorName" placeholder="Enter author's last name" />
+        <label for="valueInput"> Title </label>
+        <input type="text" class="form-control" id="Title" placeholder="Enter book's title" />
+        <label for="valueInput"> Amount </label>
+        <input type="number" class="form-control" id="Amount" placeholder="Enter amount" />
+    </div>
+    <button id="AddBtn" type="button" class="btn btn-primary"> Add </button>
+</div>
+
+<div id="booksContainer" class="container">
+    <div class="row bg-light justify-content-md-center" data-row-type="header">
+        <div class="col-sm">
+            ID
+        </div>
+        <div class="col-sm">
+            Author's last name
+        </div>
+        <div class="col-sm">
+            Title
+        </div>
+        <div class="col-sm">
+            Amount
+        </div>
+        <div class="col-sm">
+            @*empyt column for delete button*@
+        </div>
+    </div>
+
+    <div class="row d-none" data-row-type="template">
+        <div class="col-sm" data-column-type="id">
+
+        </div>
+
+        <div class="col-sm" data-column-type="lastName">
+
+        </div>
+        <div class="col-sm" data-column-type="title">
+
+        </div>
+        <div class="col-sm" data-column-type="amount">
+
+        </div>
+        <div class="col-sm">
+            <a href="#" data-action="Remove"> Remove </a>
+        </div>
+    </div>
+</div>
+<script src="~/js/newBookPanel.js" asp-append-version="true"></script>
+<script src="~/js/bookController.js" asp-append-version="true"></script>
+<script src="~/js/bookService.js" asp-append-version="true"></script>
+<script src="~/js/bookListPanel.js" asp-append-version="true"></script>
+
+<script>
+    (() => new BookController({serviceUrl:'@Configuration.GetSection("AppSettings")["ServiceUrl"]'}))()
+</script>
