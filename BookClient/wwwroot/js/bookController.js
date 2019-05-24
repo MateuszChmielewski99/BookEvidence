@@ -2,7 +2,7 @@
     _newBookPanel = null
     _bookListPanel = null
     _service = null
-    _id = 2
+
     constructor(args) {
         this._service = new BookService(args.serviceUrl)
         this._newBookPanel = new NewBookPanel()
@@ -19,6 +19,17 @@
 
 
                 _this._service.post(data)
+            }
+
+            bookEdited(e) {
+                let data = {}
+                data.id = e.id
+                data.author_last_name = e.name
+                data.title = e.title
+                data.amount = e.amount
+
+                _this._service.put(data.id, data)
+                _this._newBookPanel.hideButtons()
             }
         })
 
@@ -50,7 +61,8 @@
                 }
 
                 putResponseReady(e) {
-
+                        _this._bookListPanel.editBook(e)
+                    
                 }
          })
 

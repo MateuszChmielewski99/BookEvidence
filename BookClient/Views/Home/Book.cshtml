@@ -18,7 +18,10 @@
         <input type="number" class="form-control" id="Amount" placeholder="Enter amount" />
     </div>
     <button id="AddBtn" type="button" class="btn btn-primary"> Add </button>
+    <button id="SaveBtn" type="button" class="btn btn-primary d-none"> Save </button>
+    <button id="CencelBtn" type="button" class="btn btn-secondary d-none"> Cencel </button>
 </div>
+
 
 <div id="booksContainer" class="container">
     <div class="row bg-light justify-content-md-center" data-row-type="header">
@@ -37,10 +40,15 @@
         <div class="col-sm">
             @*empyt column for delete button*@
         </div>
+        <div class=" = col-sm">
+            @*empty column for edit button*@
+        </div>
     </div>
 
-    <div class="row d-none" data-row-type="template">
-        <div class="col-sm" data-column-type="id">
+    <div class="d-none" id="id" data-bookId>  </div>
+
+    <div class="row d-none" data-row-type="template" data-internal-id>
+        <div class="col-sm" data-column-type="id" >
 
         </div>
 
@@ -55,6 +63,9 @@
         </div>
         <div class="col-sm">
             <a href="#" data-action="Remove"> Remove </a>
+        </div>
+        <div class="col-sm">
+            <a href="#" data-action="Edit"> Edit </a>
         </div>
     </div>
 </div>

@@ -68,10 +68,10 @@
     }
 
     put(id, data) {
-        let req = XMLHttpRequest()
+        let req = new XMLHttpRequest()
         req.onreadystatechange = e => {
             if (req.readyState == 4 && req.status == 204) {
-                this._raisePutResponseReady({})
+                this._raisePutResponseReady(data)
             }
         }
 
