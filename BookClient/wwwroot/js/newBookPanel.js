@@ -32,7 +32,7 @@
         SaveButton.addEventListener('click', e =>
         {
 
-            let id = document.getElementById('id')
+           // let id = document.getElementById('id')
 
             let nameInput = document.querySelector('#AuthorName')
             let titleInput = document.querySelector('#Title')
@@ -41,7 +41,7 @@
 
 
             this._reiseBookEditingSaveEvent({
-                id: id.dataset['bookId'],
+               // id: id.dataset['bookId'],
                 name: nameInput.value,
                 title: titleInput.value,
                 amount: amountInput.value

@@ -3,7 +3,7 @@
 
     addNewBook(book) {
         let grid = document.querySelector('#booksContainer')
-        let newRow = grid.children[2].cloneNode(true)
+        let newRow = grid.children[1].cloneNode(true)
 
 
         let idColumn = newRow.querySelector('div[data-column-type=\'id\']')
@@ -45,7 +45,12 @@
             let titleColumn = editAnchor.parentElement.parentElement.querySelector('div[data-column-type=\'title\']')
             let amountColumn = editAnchor.parentElement.parentElement.querySelector('div[data-column-type=\'amount\']')
             let idColumn = editAnchor.parentElement.parentElement.querySelector('div[data-column-type=\'id\']')
-            id.dataset['bookId'] = idColumn.innerText
+
+            // id.dataset['bookId'] = idColumn.innerText
+
+            this._raiseBookEditingEvent({
+                id: idColumn.innerText
+            })
 
             let nameInput = document.getElementById('AuthorName')
             let titleInput = document.getElementById('Title')
@@ -84,6 +89,12 @@
     _raiseBookRemovedEvent(e) {
         this._listeners.forEach(s => {
             s.bookRemoved(e)
+        })
+    }
+
+    _raiseBookEditingEvent(e) {
+        this._listeners.forEach(s => {
+            s.bookEditing(e)
         })
     }
 

@@ -2,6 +2,7 @@
     _newBookPanel = null
     _bookListPanel = null
     _service = null
+    _id = -1
 
     constructor(args) {
         this._service = new BookService(args.serviceUrl)
@@ -23,7 +24,7 @@
 
             bookEdited(e) {
                 let data = {}
-                data.id = e.id
+                data.id = _this._id
                 data.author_last_name = e.name
                 data.title = e.title
                 data.amount = e.amount
@@ -36,6 +37,10 @@
         this._bookListPanel.addEventListener(new class {
             bookRemoved(e) {
                 _this._service.delete(e.id)
+            }
+
+            bookEditing(e) {
+                _this._id = e.id
             }
 
         })
